@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 40px;
 }
 
 .offer__title {
@@ -24,6 +24,7 @@
   font-weight: 500;
   color: variables.$color-primary;
   margin: 0;
+  max-width: 350px;
 }
 
 .offer__text {
@@ -32,6 +33,7 @@
   line-height: 1.5;
   color: variables.$color-primary;
   margin: 0;
+  max-width: 350px;
 }
 
 .offer__desk .btn {
@@ -42,10 +44,10 @@
   flex-shrink: 0;
   width: 670px;
   height: 451px;
-  margin-left: -200px;
   background-image: url(/assets/images/offer.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
+  position: absolute;
+  right: 400px;
 }
