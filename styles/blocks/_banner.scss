@@ -1,0 +1,38 @@
+@use "../variables";
+
+.banner {
+  min-height: 400px;
+  background-image: url("/assets/images/banner.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 81px;
+  font-family: variables.$font-family-rale;
+  color: variables.$color-primary;
+  font-weight: 500;
+}
+
+.banner__desk {
+  margin-left: auto;
+  margin-right: 300px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.banner__title {
+  font-size: 32px;
+  margin: 0;
+}
+
+.banner__text {
+  font-family: variables.$font-family-plus;
+  font-size: 18px;
+  color: variables.$color-secondary;
+  margin: 0;
+}

@@ -1,0 +1,32 @@
+@use "fonts";
+@use "mixins";
+@use "normalize";
+@use "blocks/navigation";
+@use "blocks/button";
+@use "blocks/hero";
+@use "blocks/bestsellers";
+@use "blocks/banner";
+@use 'blocks/offer';
+@use "variables";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-right: 98px;
+  margin-left: 98px;
+}
+.header {
+  height: 100vh;
+  background-image: url(/assets/images/header_back.webp);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+body {
+  overflow-x: hidden;
+}

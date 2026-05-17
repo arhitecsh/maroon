@@ -1,0 +1,170 @@
+@use "../variables";
+
+.bestsellers {
+  overflow: hidden;
+}
+
+.bestsellers__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding-left: 98px;
+}
+
+.bestsellers__desk {
+  margin-top: 140px;
+  flex-shrink: 0;
+  width: 280px;
+  padding-top: 40px;
+  font-family: variables.$font-family-rale;
+  color: variables.$color-primary;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+
+.bestsellers__title {
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.bestsellers__p {
+  font-family: variables.$font-family-plus;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.bestsellers__desk .btn {
+  margin-top: 40px;
+  align-self: flex-start;
+}
+
+.swiper {
+  margin-top: 140px;
+  margin-bottom: 177px;
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 20px 30px;
+  max-width: 230px;
+  min-height: 312px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slide-one {
+  background-image: url(/assets/images/cream_1.webp);
+}
+.slide-two {
+  background-image: url(/assets/images/cream_2.webp);
+}
+.slide-three {
+  background-image: url(/assets/images/cream_3.webp);
+}
+.slide-four {
+  background-image: url(/assets/images/cream_4.webp);
+}
+.slide-five {
+  background-image: url(/assets/images/coconat.webp);
+}
+.slide-six {
+  background-image: url(/assets/images/lavandar.webp);
+}
+
+.swiper__info {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.swiper__title {
+  font-family: variables.$font-family-rale;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.swiper__text {
+  font-size: 14px;
+  color: variables.$color-secondary;
+  margin: 0;
+}
+
+.swiper__button {
+  position: relative;
+  font-size: 14px;
+  margin-top: 8px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: variables.$color-primary;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.swiper__nav {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-top: 30px;
+  padding-right: 98px;
+  z-index: 10;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative;
+  width: 27px;
+  height: 13px;
+  margin: 0;
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: variables.$color-primary;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.swiper-button-prev svg {
+  transform: rotate(180deg);
+}

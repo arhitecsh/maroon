@@ -1,0 +1,51 @@
+@use "../variables";
+
+.offer__wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+
+.offer__desk {
+  flex-shrink: 0;
+  width: 683px;
+  padding: 100px;
+  background-color: variables.$color-back;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.offer__title {
+  font-family: variables.$font-family-rale;
+  font-size: 32px;
+  font-weight: 500;
+  color: variables.$color-primary;
+  margin: 0;
+}
+
+.offer__text {
+  font-family: variables.$font-family-plus;
+  font-size: 18px;
+  line-height: 1.5;
+  color: variables.$color-primary;
+  margin: 0;
+}
+
+.offer__desk .btn {
+  margin-top: 20px;
+}
+
+.offer__photo {
+  flex-shrink: 0;
+  width: 670px;
+  height: 451px;
+  margin-left: -200px;
+  background-image: url(/assets/images/offer.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}

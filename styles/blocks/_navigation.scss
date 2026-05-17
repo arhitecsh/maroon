@@ -1,0 +1,45 @@
+@use "../variables";
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 35px;
+  padding: 40px 0;
+  color: #122947;
+  font-family: variables.$font-family-plus;
+  font-weight: variables.$font-weight-regular;
+  font-size: 16px;
+}
+.nav__logo-link {
+  width: 131px;
+  height: 21px;
+}
+.nav__icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  & a {
+    transition: variables.$transition-smooth;
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.nav__icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .nav {
+    padding-inline: 20px;
+  }
+}

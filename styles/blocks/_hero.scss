@@ -1,0 +1,45 @@
+@use "../variables";
+
+.hero {
+  display: flex;
+  column-gap: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+.hero__desk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 300px;
+}
+.hero__desk-p {
+  width: 100%;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 18px;
+  font-family: variables.$font-family-plus;
+  font-weight: variables.$font-weight-regular;
+}
+
+.hero__card-desk {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-family: variables.$font-family-plus;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.hero__card-link {
+  transition: variables.$transition-smooth;
+  &:hover {
+    transform: translateX(2px);
+  }
+}
+.hero__card {
+  min-width: 330px;
+  min-height: 422px;
+}
