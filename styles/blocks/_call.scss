@@ -1,0 +1,26 @@
+@use '../variables';
+
+
+.call__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 71px;
+}
+.call__gallery {
+    display: grid;
+    grid-template-columns: 233px 233px 233px;
+    grid-template-rows: 233px;
+}
+.call__gallery-img {
+    max-width: 233px;
+    max-height: 233px;
+
+}
+.call__desk {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
