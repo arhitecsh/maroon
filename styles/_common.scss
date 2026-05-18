@@ -1,0 +1,19 @@
+@use "variables";
+
+.title {
+  font-family: variables.$font-family-rale;
+  font-size: 32px;
+  font-weight: 500;
+  color: variables.$color-primary;
+}
+
+.text {
+  font-family: variables.$font-family-plus;
+  font-size: 18px;
+  line-height: 1.5;
+  color: variables.$color-primary;
+}
+
+.text--muted {
+  color: variables.$color-secondary;
+}

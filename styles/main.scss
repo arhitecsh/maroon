@@ -1,12 +1,14 @@
 @use "fonts";
 @use "mixins";
 @use "normalize";
+@use "common";
 @use "blocks/navigation";
 @use "blocks/button";
 @use "blocks/hero";
 @use "blocks/bestsellers";
 @use "blocks/banner";
-@use 'blocks/offer';
+@use "blocks/offer";
+@use 'blocks/slogan';
 @use "variables";
 
 *,
@@ -29,4 +31,11 @@
 }
 body {
   overflow-x: hidden;
+}
+
+.title {
+  font-family: variables.$font-family-rale;
+  color: variables.$color-primary;
+  font-size: 32px;
+  margin: 0;
 }

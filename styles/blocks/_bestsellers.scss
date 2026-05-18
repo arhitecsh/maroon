@@ -26,14 +26,6 @@
 
 .bestsellers__title {
   margin-bottom: 30px;
-  font-size: 32px;
-}
-
-.bestsellers__p {
-  font-family: variables.$font-family-plus;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.4;
 }
 
 .bestsellers__desk .btn {
@@ -103,6 +95,7 @@
 
 .swiper__text {
   font-size: 14px;
+  font-family: variables.$font-family-plus;
   color: variables.$color-secondary;
   margin: 0;
 }
@@ -111,7 +104,8 @@
   position: relative;
   font-size: 14px;
   margin-top: 8px;
-
+  font-family: variables.$font-family-plus;
+  color: variables.$color-primary;
   &::after {
     content: "";
     position: absolute;

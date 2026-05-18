@@ -217,6 +217,24 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
+.title {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #122947;
+}
+
+.text {
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #122947;
+}
+
+.text--muted {
+  color: #9a9da0;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -303,11 +321,7 @@ svg * {
 
 .hero__desk-p {
   width: 100%;
-  line-height: 1.5;
   text-align: center;
-  font-size: 18px;
-  font-family: "M PLUS 1p", sans-serif;
-  font-weight: 400;
 }
 
 .hero__card-desk {
@@ -358,14 +372,6 @@ svg * {
 
 .bestsellers__title {
   margin-bottom: 30px;
-  font-size: 32px;
-}
-
-.bestsellers__p {
-  font-family: "M PLUS 1p", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.4;
 }
 
 .bestsellers__desk .btn {
@@ -440,6 +446,7 @@ svg * {
 
 .swiper__text {
   font-size: 14px;
+  font-family: "M PLUS 1p", sans-serif;
   color: #9a9da0;
   margin: 0;
 }
@@ -448,6 +455,8 @@ svg * {
   position: relative;
   font-size: 14px;
   margin-top: 8px;
+  font-family: "M PLUS 1p", sans-serif;
+  color: #122947;
 }
 .swiper__button::after {
   content: "";
@@ -530,14 +539,10 @@ svg * {
 }
 
 .banner__title {
-  font-size: 32px;
   margin: 0;
 }
 
 .banner__text {
-  font-family: "M PLUS 1p", sans-serif;
-  font-size: 18px;
-  color: #9a9da0;
   margin: 0;
 }
 
@@ -560,19 +565,11 @@ svg * {
 }
 
 .offer__title {
-  font-family: "Raleway", sans-serif;
-  font-size: 32px;
-  font-weight: 500;
-  color: #122947;
   margin: 0;
   max-width: 350px;
 }
 
 .offer__text {
-  font-family: "M PLUS 1p", sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
-  color: #122947;
   margin: 0;
   max-width: 350px;
 }
@@ -591,6 +588,24 @@ svg * {
   background-repeat: no-repeat;
   position: absolute;
   right: 400px;
+}
+
+.slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  background-image: url(/assets/images/slogan.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 433px;
+}
+
+.slogan__title {
+  text-align: center;
+  max-width: 780px;
 }
 
 *,
@@ -615,6 +630,13 @@ svg * {
 
 body {
   overflow-x: hidden;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  color: #122947;
+  font-size: 32px;
+  margin: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
