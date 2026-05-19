@@ -634,6 +634,59 @@ svg * {
   gap: 30px;
 }
 
+.contacts__wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 140px;
+  margin-bottom: 140px;
+  position: relative;
+}
+
+.contacts__desk {
+  flex-shrink: 0;
+  width: 683px;
+  padding: 100px;
+  background-color: #F4F1ED;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+.contacts__title {
+  margin: 0;
+  max-width: 350px;
+  color: #122947;
+}
+
+.contacts__text-title {
+  font-weight: 700;
+  color: #122947;
+}
+
+.contacts__text {
+  margin: 0;
+  max-width: 350px;
+  color: #9a9da0;
+}
+
+.contacts__map {
+  position: absolute;
+  width: 670px;
+  height: 451px;
+  right: 300px;
+  z-index: 1;
+}
+.contacts__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
 *,
 *::before,
 *::after {
