@@ -255,6 +255,12 @@ svg * {
 .nav__icon {
   display: block;
   flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.nav__icon-link:hover .nav__icon {
+  transform: scale(1.15) rotate(-5deg);
+  opacity: 0.7;
 }
 
 .nav__actions {
@@ -338,9 +344,21 @@ svg * {
   transition: all 0.3s ease;
 }
 .hero__card-link:hover {
-  transform: translateX(2px);
+  transform: translateX(4px);
 }
 
+.hero__card-link:hover .hero__card-icon {
+  animation: arrow-bounce 0.6s ease infinite alternate;
+}
+
+@keyframes arrow-bounce {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(6px);
+  }
+}
 .hero__card {
   min-width: 330px;
   min-height: 422px;
@@ -513,6 +531,30 @@ svg * {
   transform: rotate(180deg);
 }
 
+.swiper-button-prev:hover svg {
+  animation: arrow-slide-left 0.5s ease infinite alternate;
+}
+
+.swiper-button-next:hover svg {
+  animation: arrow-slide-right 0.5s ease infinite alternate;
+}
+
+@keyframes arrow-slide-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(5px);
+  }
+}
+@keyframes arrow-slide-left {
+  from {
+    transform: rotate(180deg) translateX(0);
+  }
+  to {
+    transform: rotate(180deg) translateX(5px);
+  }
+}
 .banner {
   min-height: 400px;
   background-image: url("/assets/images/banner.webp");
@@ -654,6 +696,21 @@ svg * {
   line-height: 1.4;
   position: relative;
   z-index: 1;
+}
+
+.contacts__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.contacts__icons svg {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contacts__icons svg:hover {
+  transform: scale(1.2) translateY(-3px);
+  color: #9a9da0;
 }
 
 .contacts__title {

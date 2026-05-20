@@ -32,7 +32,20 @@
 .hero__card-link {
   transition: variables.$transition-smooth;
   &:hover {
-    transform: translateX(2px);
+    transform: translateX(4px);
+  }
+}
+
+.hero__card-link:hover .hero__card-icon {
+  animation: arrow-bounce 0.6s ease infinite alternate;
+}
+
+@keyframes arrow-bounce {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(6px);
   }
 }
 .hero__card {

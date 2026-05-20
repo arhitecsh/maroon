@@ -20,6 +20,23 @@
   position: relative;
   z-index: 1;
 }
+.contacts__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  svg {
+    cursor: pointer;
+    transition: variables.$transition-smooth;
+  }
+
+  svg:hover {
+    transform: scale(1.2) translateY(-3px);
+    color: variables.$color-secondary;
+  }
+}
+
 .contacts__title {
   margin: 0;
   max-width: 350px;

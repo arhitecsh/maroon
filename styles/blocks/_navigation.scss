@@ -18,6 +18,12 @@
 .nav__icon {
   display: block;
   flex-shrink: 0;
+  transition: variables.$transition-smooth;
+}
+
+.nav__icon-link:hover .nav__icon {
+  transform: scale(1.15) rotate(-5deg);
+  opacity: 0.7;
 }
 
 .nav__actions {
