@@ -1,0 +1,115 @@
+@use "../variables";
+
+.footer {
+  padding: 60px 0 30px;
+  background-color: variables.$color-back;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__logo {
+    width: 131px;
+    height: 21px;
+    transition: variables.$transition-smooth;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__link {
+    font-family: variables.$font-family-plus;
+    font-size: 16px;
+    color: variables.$color-primary;
+    transition: variables.$transition-smooth;
+
+    &:hover {
+      color: variables.$color-secondary;
+      transform: translateY(-2px);
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto;
+  }
+
+  &__icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: variables.$color-primary;
+    transition: variables.$transition-smooth;
+
+    &:hover {
+      transform: scale(1.2) translateY(-3px);
+      color: variables.$color-secondary;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 1px;
+      background-color: variables.$border-color;
+    }
+  }
+
+  &__copy,
+  &__policy {
+    font-size: 14px;
+    color: variables.$color-secondary;
+    margin: 0;
+  }
+
+  &__policy {
+    transition: variables.$transition-smooth;
+
+    &:hover {
+      color: variables.$color-primary;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    &__wrapper {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__nav {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  }
+}
