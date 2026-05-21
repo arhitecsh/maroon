@@ -2,14 +2,12 @@
 
 .logo {
   display: inline-block;
-  width: 260px;
-  height: 40px;
+  width: auto;
   color: #122947;
   font-family: "Raleway", sans-serif;
-  font-size: 58px;
+  font-size: clamp(42px, 7vw, 58px);
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0;
   white-space: nowrap;
 }
-

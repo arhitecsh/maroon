@@ -2,42 +2,75 @@
 
 .hero {
   display: flex;
-  column-gap: 48px;
+  column-gap: clamp(24px, 4vw, 48px);
   align-items: center;
   justify-content: center;
-  margin-top: 70px;
-}
-.hero__desk {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  max-width: 300px;
-}
-.hero__desk-p {
-  width: 100%;
-  text-align: center;
-}
+  margin-top: clamp(24px, 6vw, 70px);
 
-.hero__card-desk {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
-  font-family: variables.$font-family-plus;
-  font-weight: 500;
-  line-height: 1.4;
-}
+  &__desk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 300px;
 
-.hero__card-link {
-  transition: variables.$transition-smooth;
-  &:hover {
-    transform: translateX(4px);
+    &-p {
+      width: 100%;
+      text-align: center;
+    }
   }
-}
 
-.hero__card-link:hover .hero__card-icon {
-  animation: arrow-bounce 0.6s ease infinite alternate;
+  &__card {
+    min-width: 330px;
+    min-height: 422px;
+
+    &-desk {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+      font-family: variables.$font-family-plus;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    &-link {
+      transition: variables.$transition-smooth;
+
+      &:hover {
+        transform: translateX(4px);
+
+        .hero__card-icon {
+          animation: arrow-bounce 0.6s ease infinite alternate;
+        }
+      }
+    }
+  }
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    align-items: flex-start;
+
+    &__card {
+      min-width: 0;
+      min-height: auto;
+      flex: 1;
+    }
+  }
+
+  @media (max-width: variables.$breakpoint-mobile) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__desk {
+      order: -1;
+      max-width: 420px;
+    }
+
+    &__card {
+      width: min(100%, 360px);
+    }
+  }
 }
 
 @keyframes arrow-bounce {
@@ -47,8 +80,4 @@
   to {
     transform: translateX(6px);
   }
-}
-.hero__card {
-  min-width: 330px;
-  min-height: 422px;
 }

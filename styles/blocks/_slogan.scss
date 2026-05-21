@@ -10,9 +10,9 @@
   background-repeat: no-repeat;
   min-height: 433px;
   margin-bottom: 140px;
-}
 
-.slogan__title {
-  text-align: center;
-  max-width: 780px;
+  &__title {
+    text-align: center;
+    max-width: 780px;
+  }
 }

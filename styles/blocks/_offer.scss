@@ -1,45 +1,77 @@
 @use "../variables";
 
-.offer__wrapper {
-  display: flex;
-  align-items: center;
-  margin-top: 140px;
-  margin-bottom: 140px;
-}
+.offer {
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    margin-top: clamp(70px, 10vw, 140px);
+    margin-bottom: clamp(70px, 10vw, 140px);
+  }
 
-.offer__desk {
-  flex-shrink: 0;
-  width: 683px;
-  padding: 100px;
-  background-color: variables.$color-back;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-}
+  &__desk {
+    flex-shrink: 0;
+    width: min(100%, 540px);
+    padding: clamp(40px, 5vw, 80px);
+    background-color: variables.$color-back;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(24px, 3vw, 40px);
 
-.offer__title {
-  margin: 0;
-  max-width: 350px;
-}
+    .btn {
+      margin-top: 20px;
+    }
+  }
 
-.offer__text {
-  margin: 0;
-  max-width: 350px;
-}
+  &__title {
+    margin: 0;
+    max-width: 350px;
+  }
 
-.offer__desk .btn {
-  margin-top: 20px;
-}
+  &__text {
+    margin: 0;
+    max-width: 350px;
+  }
 
-.offer__photo {
-  flex-shrink: 0;
-  width: 670px;
-  height: 451px;
-  background-image: url(/assets/images/offer.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  right: 400px;
+  &__photo {
+    flex: 1;
+    min-height: 380px;
+    background-image: url(/assets/images/offer.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: variables.$breakpoint-tablet) {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__desk {
+      width: 100%;
+    }
+
+    &__photo {
+      width: 100%;
+      min-height: auto;
+      height: clamp(280px, 40vw, 420px);
+      order: -1;
+    }
+  }
+
+  @media (max-width: variables.$breakpoint-mobile) {
+    &__desk {
+      align-items: center;
+      text-align: center;
+      padding: 36px 24px;
+
+      .btn {
+        align-self: center;
+      }
+    }
+
+    &__photo {
+      height: 260px;
+    }
+  }
 }

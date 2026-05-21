@@ -1,9 +1,23 @@
+// Fonts
 $font-family-plus: "M PLUS 1p", sans-serif;
 $font-family-rale: "Raleway", sans-serif;
-
 $font-weight-regular: 400;
-$border-color: #b3bac1;
+
+// Colors
 $color-primary: #122947;
-$color-back: #F4F1ED;
 $color-secondary: #9a9da0;
+$color-back: #f4f1ed;
+$border-color: #b3bac1;
+$color-white: #ffffff;
+
+// Transitions
 $transition-smooth: all 0.3s ease;
+
+// Layout
+$container-padding: 98px;
+$container-padding-mobile: 20px;
+$section-gap: 140px;
+
+// Breakpoints
+$breakpoint-tablet: 1023px;
+$breakpoint-mobile: 767px;

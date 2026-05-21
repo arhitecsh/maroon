@@ -22,16 +22,18 @@
 }
 
 .container {
-  margin-right: 98px;
-  margin-left: 98px;
+  width: min(100% - 40px, 1170px);
+  margin-inline: auto;
 }
+
 .header {
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(/assets/images/header_back.webp);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
+
 body {
   overflow-x: hidden;
 }
@@ -39,6 +41,25 @@ body {
 .title {
   font-family: variables.$font-family-rale;
   color: variables.$color-primary;
-  font-size: 32px;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.25;
   margin: 0;
+}
+
+@media (max-width: variables.$breakpoint-tablet) {
+  .container {
+    width: min(100% - 32px, 900px);
+  }
+}
+
+@media (max-width: variables.$breakpoint-mobile) {
+  .container {
+    width: min(100% - 24px, 540px);
+  }
+
+  .header {
+    min-height: auto;
+    padding-bottom: 60px;
+    background-position: center top;
+  }
 }

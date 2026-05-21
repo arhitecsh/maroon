@@ -92,10 +92,20 @@
       color: variables.$color-primary;
     }
   }
-}
 
-@media (max-width: 767px) {
-  .footer {
+  @media (max-width: variables.$breakpoint-tablet) {
+    &__wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    &__icons {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: variables.$breakpoint-mobile) {
     &__wrapper {
       flex-direction: column;
       gap: 30px;

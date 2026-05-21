@@ -9,11 +9,11 @@
 
 .text {
   font-family: variables.$font-family-plus;
-  font-size: 18px;
+  font-size: clamp(15px, 1.6vw, 18px);
   line-height: 1.5;
   color: variables.$color-primary;
-}
 
-.text--muted {
-  color: variables.$color-secondary;
+  &--muted {
+    color: variables.$color-secondary;
+  }
 }
